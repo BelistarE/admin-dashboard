@@ -2,6 +2,7 @@
 
 :root {
     --foreground-color: #2e3136;
+    --text-color: rgb(213, 211, 214);
 }
 
 body{
@@ -35,6 +36,25 @@ body{
 .sidebar > div:first-child{
     display: flex;
     align-items: center;
+}
+.menu-button{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+    padding: 10px;
+}
+.menu-button:hover{
+    background-color: #22252a;
+}
+.menu-icon, .icon{
+    width: 40px;
+    filter: brightness(0) invert(1);
+}
+
+.menu-button > p {
+    padding: 5px;
+    font-weight: bold;
 }
 
 .header {
@@ -74,11 +94,23 @@ body{
 .search-input {
     border-radius: 20px;
 }
+.announcements > div{
+    padding: 20px;
+    border-radius: 10px;
+}
 
+.announcements, .collaborators{
+    padding: 20px;
+}
+
+.collaborators > div {
+    padding: 20px;
+    border-radius: 10px;
+}
 .content {
     display: grid;
     grid-template-rows: 1fr 1fr;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 4fr 2fr;
     overflow-y: auto; /* Enable vertical scroll if content exceeds container height */
     background-color: transparent !important;
     
