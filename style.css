@@ -5,6 +5,7 @@
     --text-color: rgb(213, 211, 214);
 }
 
+
 body{
     background-color: #22252a;
 }
@@ -19,10 +20,12 @@ body{
 .icon{
     width: 30px;
     height: auto;
+    cursor: pointer;
 }
 .profile-picture{
     border-radius: 50%; 
     width: 50px;
+    cursor: pointer;
 }
 .container > div {
     background-color: var(--foreground-color);
@@ -120,7 +123,7 @@ body{
 }
 
 .collaborators > div {
-    padding: 20px;
+    padding: 10px;
     border-radius: 10px;
 }
 .content {
@@ -145,6 +148,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 20px;
 }
 
 .project-discription > div {
@@ -156,11 +160,27 @@ body{
     display: flex;
     align-self: flex-end;
 }
+
 .icon-small{
     width: 30px;
     filter: brightness(0) invert(1);
 }
+.tags{
+    display: flex;
+    padding: 2px;
+    border-radius: 10px;
+    align-self: center;
+    justify-content: space-evenly;
+   
+}
 
+.tags > div {
+    background-color: white;
+    padding: 4px;
+    margin: 5px;
+    border-radius: 10px;
+
+}
 .announcements > div{
     background-color: var(--foreground-color);
 }
@@ -171,6 +191,7 @@ body{
 
 .profile{
     display: flex;
+    padding: 10px;
 }
 /* for small screens */
 @media (max-width: 768px) {
