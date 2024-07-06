@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 :root {
     --foreground-color: #2e3136;
-    --text-color: rgb(213, 211, 214);
+    --text-color: rgb(255, 255, 255);
     --accent-color: rgb(255, 83, 53);
 }
 
@@ -132,7 +132,13 @@ h2,h3,h4,h5,h6,p, button{
 .right-header{
     align-self: flex-end;
 }
-
+.right-header button {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    width: 100px;
+    font-weight: bold;
+}
 .search-input {
     border-radius: 20px;
 }
@@ -180,17 +186,32 @@ h3{
     justify-content: space-between;
     padding: 20px;
     border-radius: 20px;
+    position: relative;
+}
+.project:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 10px; /* Width of the border */
+    background-image: linear-gradient(to bottom, var(--accent-color), rgb(255, 172, 117)); /* Gradient for the border */
 }
 
+.project-discription{
+ padding: 10px;
+}
 .project-discription > div {
     display: flex;
     justify-content: space-between;
+    padding-bottom: 10px;
 }
 
 .project > div:nth-child(2){
     display: flex;
     align-self: flex-end;
 }
+
 
 .icon-small{
     width: 30px;
