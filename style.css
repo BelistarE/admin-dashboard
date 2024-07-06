@@ -1,13 +1,14 @@
 @import url('reset.css');
-
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 :root {
     --foreground-color: #2e3136;
     --text-color: rgb(213, 211, 214);
+    --accent-color: rgb(255, 83, 53);
 }
 
 
 body{
-    background-color: #22252a;
+    background-color: #202429;
 }
 
 .container{
@@ -15,7 +16,7 @@ body{
     grid-template-columns: 1fr 4fr;
     grid-template-rows: auto 1fr; /* Fixed sidebar height, fixed header height, main content area fills remaining space */
     height: 100vh;
-    gap: 20px;
+    overflow: hidden;
 }
 .icon{
     width: 30px;
@@ -34,18 +35,28 @@ body{
 .sidebar {
     grid-column: 1 / 2; 
     grid-row: 1 / 4;
-    padding: 20px;
+}
+
+h1{
+    font-family: "Nunito Sans";
+    font-weight: 700;
+}
+h2,h3,h4,h5,h6,p, button{
+    font-family: "Arimo";
 }
 .sidebar > div:first-child{
+    padding: 20px;
     display: flex;
-    align-items: center;
+}
+.sidebar > div:nth-child(2){
+    padding-top: 62px;
 }
 .menu-button{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
     cursor: pointer;
+    display: flex;
     padding: 10px;
+    padding-left: 50px;
+    border-left: 5px solid var(--accent-color);
 }
 .menu-button:hover{
     background-color: #22252a;
@@ -75,11 +86,21 @@ body{
     display: flex;
     height: 50px;
     flex: 1;
+    padding: 10px;
 }
 
 .search > input{
-    width: 30%;
+    width: max(40%, 270px);
 
+}
+#greeting > p:first-child{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#greeting > p:nth-child(2){
+    font-weight: bold;
+    font-size: 40px;
 }
 
 .notifs{
@@ -108,7 +129,9 @@ body{
 .left-header > div:nth-child(2){
     padding: 20px;
 }
-
+.right-header{
+    align-self: flex-end;
+}
 
 .search-input {
     border-radius: 20px;
@@ -129,7 +152,7 @@ body{
 .content {
     display: grid;
     grid-template-rows: 1fr 1fr;
-    grid-template-columns: 4fr 2fr;
+    grid-template-columns: 5fr 2fr;
     overflow-y: auto; /* Enable vertical scroll if content exceeds container height */
     background-color: transparent !important;
     
@@ -137,9 +160,16 @@ body{
 
 .your-projects{
     grid-row: 1 / 3;
+    padding: 20px;
+}
+.your-projects > div{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     gap: 20px;
+}
+h3{
+    font-weight: bolder;
+
 }
 
 .project{
@@ -149,6 +179,7 @@ body{
     flex-direction: column;
     justify-content: space-between;
     padding: 20px;
+    border-radius: 20px;
 }
 
 .project-discription > div {
@@ -193,11 +224,21 @@ body{
     display: flex;
     padding: 10px;
 }
-/* for small screens */
-@media (max-width: 768px) {
+/* Media query for small screens */
+@media (max-width: 935px) {
+    body {
+        overflow: auto; /* Enable scrolling for the entire page */
+    }
+
     .container {
-        grid-template-columns: 1fr; /* Single column layout for small screens */
+        grid-template-columns: 1fr; 
         grid-template-rows: auto auto 1fr; 
+        height: auto; /* Allow container to expand with content */
+        overflow: hidden; /* Hide overflow for the entire container */
+    }
+
+    .main-content {
+        overflow: auto; 
     }
 
     .sidebar {
@@ -208,10 +249,5 @@ body{
     .header {
         grid-column: 1 / 2;
         grid-row: 2 / 3;
-    }
-
-    .main-content {
-        grid-column: 1 / 2;
-        grid-row: 3 / 4;
     }
 }
