@@ -35,6 +35,10 @@ body{
 .sidebar {
     grid-column: 1 / 2; 
     grid-row: 1 / 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
 }
 
 h1{
@@ -47,16 +51,23 @@ h2,h3,h4,h5,h6,p, button{
 .sidebar > div:first-child{
     padding: 20px;
     display: flex;
+    align-items: center;
+    height: 95.972 !important;
 }
 .sidebar > div:nth-child(2){
-    padding-top: 62px;
+    transform: translateY(-65px);
+    font-size: 20px;
 }
+.sidebar > div:nth-child(3){
+    font-size: 20px;
+}
+
 .menu-button{
     cursor: pointer;
     display: flex;
     padding: 10px;
     padding-left: 50px;
-    border-left: 5px solid var(--accent-color);
+    border-left: 10px solid var(--accent-color);
 }
 .menu-button:hover{
     background-color: #22252a;
@@ -64,6 +75,7 @@ h2,h3,h4,h5,h6,p, button{
 .menu-icon, .icon{
     width: 40px;
     filter: brightness(0) invert(1);
+    cursor: pointer;
 }
 
 .menu-button > p {
@@ -138,6 +150,8 @@ h2,h3,h4,h5,h6,p, button{
     border-radius: 20px;
     width: 100px;
     font-weight: bold;
+    background-color: var(--accent-color);
+    color: white;
 }
 .search-input {
     border-radius: 20px;
@@ -161,12 +175,14 @@ h2,h3,h4,h5,h6,p, button{
     grid-template-columns: 5fr 2fr;
     overflow-y: auto; /* Enable vertical scroll if content exceeds container height */
     background-color: transparent !important;
+    margin: 20px;
     
 }
 
 .your-projects{
     grid-row: 1 / 3;
     padding: 20px;
+    padding-left: 30px;
 }
 .your-projects > div{
     display: grid;
@@ -197,7 +213,14 @@ h3{
     width: 10px; /* Width of the border */
     background-image: linear-gradient(to bottom, var(--accent-color), rgb(255, 172, 117)); /* Gradient for the border */
 }
-
+.project > div:nth-child(2){
+    color: white;
+}
+.project > div:nth-child(2) > * {
+    padding: 10px;
+    padding-bottom: 0px;
+    cursor: pointer;
+}
 .project-discription{
  padding: 10px;
 }
