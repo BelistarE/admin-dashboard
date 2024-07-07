@@ -1,7 +1,7 @@
 @import url('reset.css');
 @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 :root {
-    --foreground-color: #2e3136;
+    --foreground-color: #2d3134;
     --text-color: rgb(255, 255, 255);
     --accent-color: rgb(255, 83, 53);
 }
@@ -25,8 +25,9 @@ body{
 }
 .profile-picture{
     border-radius: 50%; 
-    width: 50px;
-    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;=
 }
 .container > div {
     background-color: var(--foreground-color);
@@ -55,9 +56,10 @@ h2,h3,h4,h5,h6,p, button{
     height: 95.972 !important;
 }
 .sidebar > div:nth-child(2){
-    transform: translateY(-65px);
+    transform: translateY(-55px);
     font-size: 20px;
 }
+
 .sidebar > div:nth-child(3){
     font-size: 20px;
 }
@@ -70,7 +72,7 @@ h2,h3,h4,h5,h6,p, button{
     border-left: 10px solid var(--accent-color);
 }
 .menu-button:hover{
-    background-color: #22252a;
+    background-color: #202429;
 }
 .menu-icon, .icon{
     width: 40px;
@@ -99,10 +101,15 @@ h2,h3,h4,h5,h6,p, button{
     height: 50px;
     flex: 1;
     padding: 10px;
+    align-items: center;
 }
-
+.search > img {
+    margin: 10px;
+}
 .search > input{
     width: max(40%, 270px);
+    border-radius: 40px;
+    height: 30px;
 
 }
 #greeting > p:first-child{
@@ -153,16 +160,22 @@ h2,h3,h4,h5,h6,p, button{
     background-color: var(--accent-color);
     color: white;
 }
-.search-input {
-    border-radius: 20px;
-}
+
 .announcements > div{
     padding: 20px;
     border-radius: 10px;
 }
-
+.announcement{
+    padding: 5px;
+}
 .announcements, .collaborators{
     padding: 20px;
+}
+div > p:nth-child(2){
+    color: #b8b8b8;
+}
+.profile > div {
+    margin: 10px;
 }
 
 .collaborators > div {
@@ -250,7 +263,6 @@ h3{
 }
 
 .tags > div {
-    background-color: white;
     padding: 4px;
     margin: 5px;
     border-radius: 10px;
@@ -260,6 +272,10 @@ h3{
     background-color: var(--foreground-color);
 }
 
+.announcement a {
+    color: #ffceaf;
+    font-weight: 800;
+}
 .collaborators > div{
     background-color: var(--foreground-color);
 }
@@ -267,6 +283,24 @@ h3{
 .profile{
     display: flex;
     padding: 10px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.tag1{
+ background-color: #ff78c4;
+}
+.tag2{
+
+    background-color: #fd91ad;
+}
+
+.tag3{
+ background-color: #ffb8ae;
+}
+.tag4{
+    background-color: #ffceaf;
+
 }
 /* Media query for small screens */
 @media (max-width: 935px) {
