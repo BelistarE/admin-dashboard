@@ -83,6 +83,7 @@ h2,h3,h4,h5,h6,p, button{
 .menu-button > p {
     padding: 5px;
     font-weight: bold;
+    color: white !important;
 }
 
 .header {
@@ -120,6 +121,7 @@ h2,h3,h4,h5,h6,p, button{
 #greeting > p:nth-child(2){
     font-weight: bold;
     font-size: 40px;
+    color: white;
 }
 
 .notifs{
